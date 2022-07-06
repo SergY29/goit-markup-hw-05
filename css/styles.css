@@ -735,12 +735,13 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  
   opacity: 1;
+  visibility: visible;
 
-    transition-property: opacity, transform;
+    transition-property: opacity, transform, visibility;
     transition-duration:400ms;
-    transition-timing-function: linear;
-
+    transition-timing-function: earse;
     transform: scale(1);
 }
 
