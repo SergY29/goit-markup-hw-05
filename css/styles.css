@@ -22,6 +22,10 @@
   --shadow-example: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --overlay-cover-img: rgba(47, 48, 58, 0.4);
+  --modal-background: rgba(0, 0, 0, 0.2);
+  --modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Base */
@@ -44,6 +48,15 @@ body {
   font-weight: 400;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .container {
@@ -205,6 +218,15 @@ body {
   border-color: transparent;
   border-radius: 4px;
   text-align: center;
+}
+
+.button-close{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
 }
 
 .button.heroes {
@@ -543,6 +565,8 @@ body {
 
 /* Icon svg */
 
+
+
 .icon-envelope {
   fill: currentColor;
   margin-right: 10px;
@@ -586,3 +610,35 @@ body {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
+
+/* Modal */
+
+.backdrop{
+  position: fixed;
+  background-color: var(--modal-background);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal{
+  min-width: 528px;
+  min-height: 581px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  background-color: var(--primary-background-color);
+  box-shadow: var(--modal-shadow);
+  border-radius: 4px;
+}
+
