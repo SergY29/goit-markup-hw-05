@@ -737,11 +737,11 @@ button {
   height: 100%;
   opacity: 1;
 
-    transition-property: opacity;
+    transition-property: opacity, transform;
     transition-duration:400ms;
     transition-timing-function: linear;
 
-    transform: scale;
+    transform: scale(1);
 }
 
 .backdrop.is-hidden{
@@ -749,6 +749,7 @@ button {
   pointer-events: none;
   visibility: hidden;
 
+  transform: scale(0.5);
 }
 
 .modal{
