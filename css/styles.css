@@ -463,14 +463,13 @@ button {
   height: 100%;
 
   
-  visibility: hidden;
   padding: 63px 24px;
 
-  transform: translatey(100%);
+  transform: translatey(101%);
   background-color: var(--ovelay-box-shadow);
 
     transition-duration: 250ms;
-      transition-property: transform, visibility;
+      transition-property: transform;
       animation-timing-function: linearcubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -507,7 +506,6 @@ button {
 }
 
 .example .item:hover .overlay {
-  visibility: visible;
   transform: translateY(0);
 }
 
